@@ -1,8 +1,8 @@
-FROM node:14.17.5
+FROM node:16.0.0
 
-WORKDIR /app
+WORKDIR /node
 COPY package.json ./
 RUN npm install
 COPY . .
-CMD ["node","app.js"]
+ENTRYPOINT ["node","app.js"]
 EXPOSE 3005
